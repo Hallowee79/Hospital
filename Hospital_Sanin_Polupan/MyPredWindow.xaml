@@ -1,0 +1,62 @@
+﻿<Window x:Class="Hospital_Sanin_Polupan.MyPredWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Hospital_Sanin_Polupan"
+        mc:Ignorable="d"
+        Title="MyPredWindow" Background="LightBlue" Height="450" Width="700">
+    <Grid>
+        <Button x:Name="ExitButton"
+                Margin="15"
+                Background="{x:Null}"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                BorderThickness="0"
+                Click="ExitButton_Click">
+            <Image Source="C:\Users\Преподаватель\source\repos\Hospital_Sanin_Polupan\Hospital_Sanin_Polupan\Res\Group 2.png"
+                       Height="80"
+                           Margin="0 0 30 0"/>
+        </Button>
+        <StackPanel>
+            <Border Margin="5"
+                    Background="#FF1DA9D3"
+                    Height="100"
+                    VerticalAlignment="Top"
+                    Width="500">
+                <TextBlock Text="Предстояшие Записи на Приём"
+                           TextWrapping="Wrap"
+                           TextAlignment="Center"
+                           VerticalAlignment="Center"
+                           Margin="0 0 0 0"
+                           HorizontalAlignment="Center"
+                           Foreground="White"
+                           FontSize="32" 
+                           FontFamily="Bodoni MT Black"/>
+            </Border>
+            <DataGrid x:Name="DataGrid" AutoGenerateColumns="True" Height="230" VerticalAlignment="Center">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Width="100" Header="Дата" x:Name="dg1" Binding="{Binding Path=Column1}"/>
+                    <DataGridTextColumn Width="300" Header="Услуга" x:Name="dg2" Binding="{Binding Path=Column2}"/>
+                    <DataGridTextColumn Width="300" Header="Врач" x:Name="dg3" Binding="{Binding Path=Column3}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+        <Button Content="Назад"
+                Background="#FF3583E0"
+                Foreground="White"
+                Height="40"
+                Margin="0 0 0 20"
+                Width="150"
+                VerticalAlignment="Bottom" 
+                Click="Button_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius"
+                            Value="20">
+                    </Setter>
+                </Style>
+            </Button.Resources>
+        </Button>
+    </Grid>
+</Window>

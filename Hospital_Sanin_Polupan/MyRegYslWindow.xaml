@@ -1,0 +1,75 @@
+﻿<Window x:Class="Hospital_Sanin_Polupan.MyRegYslWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Hospital_Sanin_Polupan"
+        mc:Ignorable="d"
+        Title="MyRegYslWindow" Background="LightBlue" Height="450" Width="800">
+    <Window.Resources>
+        <Style TargetType="Button" >
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="20"
+                                Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
+                                              VerticalAlignment="{TemplateBinding VerticalAlignment}"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Button x:Name="ExitButton"
+                Margin="15"
+                Background="{x:Null}"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                BorderThickness="0"
+                Click="ExitButton_Click">
+            <Image Source="C:\Users\Преподаватель\source\repos\Hospital_Sanin_Polupan\Hospital_Sanin_Polupan\Res\Group 2.png"
+                       Height="80"
+                           Margin="0 0 30 0"/>
+        </Button>
+        <StackPanel>
+            <Border Margin="5"
+                    Background="#FF1DA9D3"
+                    Height="100"
+                    VerticalAlignment="Top"
+                    Width="500">
+                <TextBlock Text="Запись на услугу"
+                           TextWrapping="Wrap"
+                           TextAlignment="Center"
+                           VerticalAlignment="Center"
+                           Margin="0 0 0 0"
+                           HorizontalAlignment="Center"
+                           Foreground="White"
+                           FontSize="32" 
+                           FontFamily="Bodoni MT Black"/>
+            </Border>
+            <DatePicker x:Name="Datee" Width="300"/>
+
+
+        </StackPanel>
+        <ComboBox x:Name="CmbProcedure"
+                  Height="50" VerticalAlignment="Top"
+                  Margin="0 140 0 0"
+                  Foreground="Black"/>
+        <Button x:Name="BtnBack" HorizontalAlignment="Left" 
+                VerticalAlignment="Bottom"  Width="150" Height="30" Foreground="White" 
+                 Background="#007BB0" Grid.Row="5" Margin="85 0 0 30"
+                Click='BtnBack_Click' >
+            <TextBlock Text="Назад" Width="70" Margin="58 0 0 6"/>
+        </Button>
+        <Button x:Name="BtnRegProcedur" HorizontalAlignment="Right" 
+                VerticalAlignment="Bottom"  Width="150" Height="30" Foreground="White" 
+                 Background="#007BB0" Grid.Row="5" Margin="85 0 85 30"
+                Click='BtnRegProcedur_Click'  >
+            <TextBlock Text="Записаться на услугу"
+                       Margin="0 0 17 6"/>
+        </Button>
+    </Grid>
+</Window>
+

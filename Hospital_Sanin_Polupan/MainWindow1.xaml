@@ -1,0 +1,94 @@
+﻿<Window x:Class="Hospital_Sanin_Polupan.MainWindow1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Hospital_Sanin_Polupan"
+        mc:Ignorable="d"
+        Title="MainWindow1"  Height="600" 
+        Width="700" 
+        Background="LightBlue"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <StackPanel>
+            <WrapPanel HorizontalAlignment="Center">
+                <Button Background="{x:Null}"
+                        BorderThickness="0"
+                        Click="Button_Click"
+                        >
+                    <Image Source="C:\Users\Преподаватель\source\repos\Hospital_Sanin_Polupan\Hospital_Sanin_Polupan\Res\Group 2.png"
+                       Height="90"
+                           Margin="0 0 10 0"
+                           HorizontalAlignment="Left"/>
+                </Button>
+                <Border Background="#FF1DA9D3"
+                        Height="100"
+                        Width="480"
+                        VerticalAlignment="Top"
+                        Margin="0,5">
+                    <TextBlock Text="Главная страница пациента"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"
+                           Foreground="White"                         
+                           FontSize="28" 
+                           FontFamily="Bodoni MT Black"/>
+                </Border>
+                <Button x:Name="btnpred" Click="Btnpred_Click" Background="{x:Null}"
+                        BorderThickness="0">
+                    <Image Source="C:\Users\Преподаватель\source\repos\Hospital_Sanin_Polupan\Hospital_Sanin_Polupan\Res\image 49.png"
+                           Height="90"
+                           Margin="10 0 0 0"/>
+                </Button>
+            </WrapPanel>
+            <Button Content="Мои данные"
+                    FontSize="32"
+                    Background="#FF3583E0"
+                    Foreground="White"
+                    Width="350"
+                    Height="100"
+                    Margin="0 25 0 0" 
+                    Click ="Button_Click_1">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius"
+                            Value="20">
+                        </Setter>
+                    </Style>
+                </Button.Resources>
+
+            </Button>
+            <Button Content="Моя история"
+                    FontSize="32"
+                    Background="#FF3583E0"
+                    Foreground="White"
+                    Width="350"
+                    Height="100"
+                    Margin="0 25 0 0" Click="Button_Click_2">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius"
+                            Value="20">
+                        </Setter>
+                    </Style>
+                </Button.Resources>
+
+            </Button>
+            <Button Content="Записаться на услугу"
+                    FontSize="32"
+                    Background="#FF3583E0"
+                    Foreground="White"
+                    Width="350"
+                    Height="100"
+                    Margin="0 25 0 0"
+                    Click="Button_Click_3">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius"
+                            Value="20">
+                        </Setter>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </StackPanel>
+    </Grid>
+</Window>
